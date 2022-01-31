@@ -25,8 +25,9 @@ import java.util.List;
 
 
 public class Main {
-
+    public static int size;
     public static void main(String[] args) {
+
 
         Restaurant restaurant =new Restaurant();
         List<Customer> customer = new ArrayList<>();
@@ -41,6 +42,7 @@ public class Main {
         customer.add(new Customer("Клиент 9", restaurant));
         customer.add(new Customer("Клиент 10", restaurant));
 
+        size = customer.size()-1;
 
         for (Customer customers: customer) {
             customers.start();

@@ -1,9 +1,9 @@
 package ru.javabegin.oop.people;
-
+import ru.javabegin.oop.Main;
 import ru.javabegin.oop.Restaurant;
 
 
-public class Waiter1 extends Thread{
+public class Waiter1 extends Thread {
     private Restaurant restaurant;
 
     public Waiter1(String name, Restaurant restaurant) {
@@ -13,7 +13,8 @@ public class Waiter1 extends Thread{
 
     @Override
     public void run() {
-        for (int i = 0; i < 4; i++) {
+
+        for (int i = 0; i < Main.size/2; i++) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {}
@@ -22,4 +23,5 @@ public class Waiter1 extends Thread{
         restaurant.receiveGoods();
 
     }
+    
 }
